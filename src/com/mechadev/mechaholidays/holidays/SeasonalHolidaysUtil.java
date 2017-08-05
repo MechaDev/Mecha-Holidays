@@ -3,14 +3,14 @@ package com.mechadev.mechaholidays.holidays;
 import java.util.Calendar;
 
 import com.mechadev.mechaholidays.builders.HolidayBuilder;
-import com.mechadev.mechaholidays.enums.H.Season;
+import com.mechadev.mechaholidays.enums.H.SeasonalHoliday;
 
-public class SeasonsUtil {
+public class SeasonalHolidaysUtil {
 	
 	static HolidayBuilder buildMarchEquinox(int year) {
 		return HolidayBuilder
 				.getInstance()
-				.setHoliday(Season.MARCH_EQUINOX)
+				.setHoliday(SeasonalHoliday.MARCH_EQUINOX)
 				.setMonth(Calendar.MARCH)
 				.setDay(20)
 				.setYear(year);
@@ -19,7 +19,7 @@ public class SeasonsUtil {
 	static HolidayBuilder buildJuneSolstice(int year) {
 		return HolidayBuilder
 				.getInstance()
-				.setHoliday(Season.JUNE_SOLSTICE)
+				.setHoliday(SeasonalHoliday.JUNE_SOLSTICE)
 				.setMonth(Calendar.JUNE)
 				.setDay(21)
 				.setYear(year);
@@ -28,7 +28,7 @@ public class SeasonsUtil {
 	static HolidayBuilder buildSeptemberEquinox(int year) {
 		return HolidayBuilder
 				.getInstance()
-				.setHoliday(Season.SEPTEMBER_EQUINOX)
+				.setHoliday(SeasonalHoliday.SEPTEMBER_EQUINOX)
 				.setMonth(Calendar.SEPTEMBER)
 				.setDay(22)
 				.setYear(year);
@@ -37,7 +37,7 @@ public class SeasonsUtil {
 	static HolidayBuilder buildDecemberSolstice(int year) {
 		return HolidayBuilder
 				.getInstance()
-				.setHoliday(Season.DECEMBER_SOLSTICE)
+				.setHoliday(SeasonalHoliday.DECEMBER_SOLSTICE)
 				.setMonth(Calendar.DECEMBER)
 				.setDay(21)
 				.setYear(year);

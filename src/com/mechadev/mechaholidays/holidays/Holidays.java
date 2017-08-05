@@ -6,7 +6,7 @@ import java.util.Date;
 import com.mechadev.mechaholidays.builders.HolidayBuilder;
 import com.mechadev.mechaholidays.enums.H;
 import com.mechadev.mechaholidays.enums.H.ChristianHoliday;
-import com.mechadev.mechaholidays.enums.H.Season;
+import com.mechadev.mechaholidays.enums.H.SeasonalHoliday;
 
 public class Holidays {
 	
@@ -18,7 +18,7 @@ public class Holidays {
 		return get(christian, Calendar.getInstance().get(Calendar.YEAR));
 	}
 	
-	public static Date get(H.Season season) {
+	public static Date get(H.SeasonalHoliday season) {
 		return get(season, Calendar.getInstance().get(Calendar.YEAR));
 	}
 	
@@ -78,44 +78,92 @@ public class Holidays {
 	public static Date get(ChristianHoliday christian, int year) {
 		HolidayBuilder holidayBuilder = null;
 		switch(christian) {
+		case EPIPHANY:
+			holidayBuilder = ChristianHolidaysUtil.buildEpiphany(year);
+			break;
+			
 		case SHROVE_TUESDAY:
-			holidayBuilder = EasterHolidaysUtil.buildShroveTuesday(year);
+			holidayBuilder = ChristianHolidaysUtil.buildShroveTuesday(year);
 			break;
 			
 		case ASH_WEDNESDAY:
-			holidayBuilder = EasterHolidaysUtil.buildAshWednesday(year);
+			holidayBuilder = ChristianHolidaysUtil.buildAshWednesday(year);
 			break;
 			
 		case PALM_SUNDAY:
-			holidayBuilder = EasterHolidaysUtil.buildPalmSundayu(year);
+			holidayBuilder = ChristianHolidaysUtil.buildPalmSundayu(year);
 			break;
 			
 		case MAUNDY_THURSDAY:
-			holidayBuilder = EasterHolidaysUtil.buildMaundyThursday(year);
+			holidayBuilder = ChristianHolidaysUtil.buildMaundyThursday(year);
 			break;
 			
 		case GOOD_FRIDAY:
-			holidayBuilder = EasterHolidaysUtil.buildGoodFriday(year);
+			holidayBuilder = ChristianHolidaysUtil.buildGoodFriday(year);
+			break;
+			
+		case HOLY_SATURDAY:
+			holidayBuilder = ChristianHolidaysUtil.buildHolySaturday(year);
 			break;
 			
 		case EASTER:
-			holidayBuilder = EasterHolidaysUtil.buildEaster(year);
+			holidayBuilder = ChristianHolidaysUtil.buildEaster(year);
 			break;
 			
 		case EASTER_MONDAY:
-			holidayBuilder = EasterHolidaysUtil.buildEasterMonday(year);
+			holidayBuilder = ChristianHolidaysUtil.buildEasterMonday(year);
 			break;
 		
 		case ASCENSION_DAY:
-			holidayBuilder = EasterHolidaysUtil.buildAscensionDay(year);
+			holidayBuilder = ChristianHolidaysUtil.buildAscensionDay(year);
 			break;
 			
 		case PENTECOST:
-			holidayBuilder = EasterHolidaysUtil.buildPentecost(year);
+			holidayBuilder = ChristianHolidaysUtil.buildPentecost(year);
 			break;
 		
-		case PENTECOST_MONDAY:
-			holidayBuilder = EasterHolidaysUtil.buildPentecostMonday(year);
+		case WHIT_MONDAY:
+			holidayBuilder = ChristianHolidaysUtil.buildWhitMonday(year);
+			break;
+			
+		case TRINITY_SUNDAY:
+			holidayBuilder = ChristianHolidaysUtil.buildTrinitySunday(year);
+			break;
+			
+		case CORPUS_CHRISTI:
+			holidayBuilder = ChristianHolidaysUtil.buildCorpusChristi(year);
+			break;
+			
+		case ASSUMPTION_OF_MARY:
+			holidayBuilder = ChristianHolidaysUtil.buildAssumptionOfMary(year);
+			break;
+			
+		case FEAST_OF_ST_FRANCIS_ASSISI:
+			holidayBuilder = ChristianHolidaysUtil.buildFeastOfStFrancisOfAssisi(year);
+			break;
+			
+		case ALL_SAINTS_DAY:
+			holidayBuilder = ChristianHolidaysUtil.buildAllSaintsDay(year);
+			break;
+			
+		case ALL_SOULS_DAY:
+			holidayBuilder = ChristianHolidaysUtil.buildAllSoulsDay(year);
+			break;
+			
+		case FIRST_SUNDAY_OF_ADVENT:
+			holidayBuilder = ChristianHolidaysUtil.buildFirstSundayOfAdvent(year);
+			break;
+			
+		case FEAST_OF_THE_IMMACULATE_CONCEPTION:
+			holidayBuilder = ChristianHolidaysUtil.buildFeastOfTheImmaculateConception(year);
+			break;
+			
+		case CHRISTMAS_EVE:
+			holidayBuilder = ChristianHolidaysUtil.buildChristmasEve(year);
+			break;
+			
+		case CHRISTMAS:
+			holidayBuilder = FederalHolidaysUtil.buildChristmasDay(year);
 			break;
 			
 		default:
@@ -125,23 +173,23 @@ public class Holidays {
 		return holidayBuilder.build();
 	}
 	
-	public static Date get(Season season, int year) {
+	public static Date get(SeasonalHoliday season, int year) {
 		HolidayBuilder holidayBuilder = null;
 		switch(season) {
 		case MARCH_EQUINOX:
-			holidayBuilder = SeasonsUtil.buildMarchEquinox(year);
+			holidayBuilder = SeasonalHolidaysUtil.buildMarchEquinox(year);
 			break;
 		
 		case JUNE_SOLSTICE:
-			holidayBuilder = SeasonsUtil.buildJuneSolstice(year);
+			holidayBuilder = SeasonalHolidaysUtil.buildJuneSolstice(year);
 			break;
 		
 		case SEPTEMBER_EQUINOX:
-			holidayBuilder = SeasonsUtil.buildSeptemberEquinox(year);
+			holidayBuilder = SeasonalHolidaysUtil.buildSeptemberEquinox(year);
 			break;
 			
 		case DECEMBER_SOLSTICE:
-			holidayBuilder = SeasonsUtil.buildDecemberSolstice(year);
+			holidayBuilder = SeasonalHolidaysUtil.buildDecemberSolstice(year);
 			break;
 			
 		default:

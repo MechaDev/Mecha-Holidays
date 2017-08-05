@@ -7,7 +7,7 @@ import java.util.GregorianCalendar;
 import com.mechadev.mechaholidays.enums.Holiday;
 import com.mechadev.mechaholidays.enums.H.ChristianHoliday;
 import com.mechadev.mechaholidays.enums.H.FederalHoliday;
-import com.mechadev.mechaholidays.enums.H.Season;
+import com.mechadev.mechaholidays.enums.H.SeasonalHoliday;
 
 public class HolidayBuilder {
 	private static HolidayBuilder instance;
@@ -107,7 +107,7 @@ public class HolidayBuilder {
 			buildFederalHoliday();
 		} else if(holiday instanceof ChristianHoliday) {
 			buildChristianHoliday();
-		} else if (holiday instanceof Season) {
+		} else if (holiday instanceof SeasonalHoliday) {
 			buildSeason();
 		}
 
