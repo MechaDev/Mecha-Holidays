@@ -3,8 +3,7 @@ package com.mechadev.mechaholidays.holidays;
 import java.util.Calendar;
 
 import com.mechadev.mechaholidays.builders.HolidayBuilder;
-import com.mechadev.mechaholidays.enums.H;
-import com.mechadev.mechaholidays.enums.H.FederalHoliday;
+import com.mechadev.mechaholidays.enums.FederalHoliday;
 
 class FederalHolidaysUtil {
 
@@ -68,7 +67,7 @@ class FederalHolidaysUtil {
 	protected static HolidayBuilder buildLaborDay(int year) {
 		return HolidayBuilder
 				.getInstance()
-				.setHoliday(H.FederalHoliday.LABOR_DAY)
+				.setHoliday(FederalHoliday.LABOR_DAY)
 				.setMonth(Calendar.SEPTEMBER)
 				.setDayOfWeek(Calendar.MONDAY)
 				.setDayOfWeekInMonth(1)
@@ -78,7 +77,7 @@ class FederalHolidaysUtil {
 	protected static HolidayBuilder buildColumbusDay(int year) {
 		return HolidayBuilder
 				.getInstance()
-				.setHoliday(H.FederalHoliday.COLUMBUS_DAY)
+				.setHoliday(FederalHoliday.COLUMBUS_DAY)
 				.setMonth(Calendar.OCTOBER)
 				.setDayOfWeek(Calendar.MONDAY)
 				.setDayOfWeekInMonth(2)
@@ -89,7 +88,7 @@ class FederalHolidaysUtil {
 		if(year >= 1971 && year <= 1977) {
 			return HolidayBuilder
 					.getInstance()
-					.setHoliday(H.FederalHoliday.VETERANS_DAY)
+					.setHoliday(FederalHoliday.VETERANS_DAY)
 					.setMonth(Calendar.OCTOBER)
 					.setDayOfWeek(Calendar.MONDAY)
 					.setDayOfWeekInMonth(4)
@@ -97,7 +96,7 @@ class FederalHolidaysUtil {
 		} else {
 			return HolidayBuilder
 					.getInstance()
-					.setHoliday(H.FederalHoliday.VETERANS_DAY)
+					.setHoliday(FederalHoliday.VETERANS_DAY)
 					.setMonth(Calendar.NOVEMBER)
 					.setDay(11)
 					.setYear(year);
@@ -107,7 +106,7 @@ class FederalHolidaysUtil {
 	protected static HolidayBuilder buildThanksgivingDay(int year) {
 		return HolidayBuilder
 				.getInstance()
-				.setHoliday(H.FederalHoliday.THANKSGIVING)
+				.setHoliday(FederalHoliday.THANKSGIVING)
 				.setMonth(Calendar.NOVEMBER)
 				.setDayOfWeek(Calendar.THURSDAY)
 				.setDayOfWeekInMonth(4)
@@ -117,7 +116,7 @@ class FederalHolidaysUtil {
 	protected static HolidayBuilder buildChristmasDay(int year) {
 		return HolidayBuilder
 				.getInstance()
-				.setHoliday(H.FederalHoliday.CHRISTMAS_DAY)
+				.setHoliday(FederalHoliday.CHRISTMAS_DAY)
 				.setMonth(Calendar.DECEMBER)
 				.setDay(25)
 				.setYear(year);

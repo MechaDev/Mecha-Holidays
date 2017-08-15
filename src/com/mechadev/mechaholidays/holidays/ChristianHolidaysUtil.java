@@ -4,7 +4,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 import com.mechadev.mechaholidays.builders.HolidayBuilder;
-import com.mechadev.mechaholidays.enums.H.ChristianHoliday;
+import com.mechadev.mechaholidays.enums.ChristianHoliday;
 import com.mechadev.mechaholidays.utils.DateUtil;
 
 class ChristianHolidaysUtil {

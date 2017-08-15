@@ -4,25 +4,25 @@ import java.util.Calendar;
 import java.util.Date;
 
 import com.mechadev.mechaholidays.builders.HolidayBuilder;
-import com.mechadev.mechaholidays.enums.H;
-import com.mechadev.mechaholidays.enums.H.ChristianHoliday;
-import com.mechadev.mechaholidays.enums.H.SeasonalHoliday;
+import com.mechadev.mechaholidays.enums.ChristianHoliday;
+import com.mechadev.mechaholidays.enums.FederalHoliday;
+import com.mechadev.mechaholidays.enums.SeasonalHoliday;
 
 public class Holidays {
 	
-	public static Date get(H.FederalHoliday federal) {
+	public static Date get(FederalHoliday federal) {
 		return get(federal, Calendar.getInstance().get(Calendar.YEAR));
 	}
 
-	public static Date get(H.ChristianHoliday christian) {
+	public static Date get(ChristianHoliday christian) {
 		return get(christian, Calendar.getInstance().get(Calendar.YEAR));
 	}
 	
-	public static Date get(H.SeasonalHoliday season) {
+	public static Date get(SeasonalHoliday season) {
 		return get(season, Calendar.getInstance().get(Calendar.YEAR));
 	}
 	
-	public static Date get(H.FederalHoliday federal, int year) {
+	public static Date get(FederalHoliday federal, int year) {
 		HolidayBuilder holidayBuilder = null;
 		switch(federal) {
 		case NEW_YEARS_DAY:

@@ -3,7 +3,7 @@ package com.mechadev.mechaholidays.holidays;
 import java.util.Calendar;
 
 import com.mechadev.mechaholidays.builders.HolidayBuilder;
-import com.mechadev.mechaholidays.enums.H.SeasonalHoliday;
+import com.mechadev.mechaholidays.enums.SeasonalHoliday;
 
 public class SeasonalHolidaysUtil {
 	

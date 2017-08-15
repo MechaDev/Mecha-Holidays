@@ -5,18 +5,13 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 
 import com.mechadev.mechaholidays.enums.Holiday;
-import com.mechadev.mechaholidays.enums.H.ChristianHoliday;
-import com.mechadev.mechaholidays.enums.H.FederalHoliday;
-import com.mechadev.mechaholidays.enums.H.SeasonalHoliday;
+import com.mechadev.mechaholidays.enums.ChristianHoliday;
+import com.mechadev.mechaholidays.enums.FederalHoliday;
+import com.mechadev.mechaholidays.enums.SeasonalHoliday;
 
 public class HolidayBuilder {
-	private static HolidayBuilder instance;
-
 	public static HolidayBuilder getInstance() { 
-		if(instance == null) {
-			instance = new HolidayBuilder();
-		}
-		return instance;
+		return new HolidayBuilder();
 	}
 
 	private HolidayBuilder() {
@@ -101,7 +96,6 @@ public class HolidayBuilder {
 
 		if(!holidaySet)
 			throw new HolidayBuilderException(HolidayBuilderException.HOLIDAY_ID_NOT_SET);
-
 
 		if(holiday instanceof FederalHoliday) {
 			buildFederalHoliday();
@@ -199,7 +193,7 @@ public class HolidayBuilder {
 
 
 	@SuppressWarnings("serial")
-	class HolidayBuilderException extends RuntimeException {
+	public class HolidayBuilderException extends RuntimeException {
 
 		private static final String HOLIDAY_ID_NOT_SET = "Holiday ID not set";
 		private static final String MONTH_NOT_SET = "Month not set";

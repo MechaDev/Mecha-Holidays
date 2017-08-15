@@ -9,7 +9,7 @@ import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
-import com.mechadev.mechaholidays.enums.H.ChristianHoliday;
+import com.mechadev.mechaholidays.enums.ChristianHoliday;
 import com.mechadev.mechaholidays.holidays.Holidays;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)

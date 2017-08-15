@@ -7,7 +7,7 @@ import java.util.Date;
 
 import org.junit.Test;
 
-import com.mechadev.mechaholidays.enums.H.SeasonalHoliday;
+import com.mechadev.mechaholidays.enums.SeasonalHoliday;
 import com.mechadev.mechaholidays.holidays.Holidays;
 
 public class SeasonalHolidays extends AbstractTest {
