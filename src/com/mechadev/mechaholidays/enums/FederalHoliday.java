@@ -1,7 +1,6 @@
-package com.mechadev.holidays;
+package com.mechadev.mechaholidays.enums;
 
-
-public enum Holiday {
+public enum FederalHoliday implements Holiday {
 	NEW_YEARS_DAY("New Years Day"),
 	INAUGURATION_DAY("Inauguration Day"),
 	MARTIN_LUTHER_KING_JR_DAY("Martin Luther King Jr Day"),
@@ -11,12 +10,13 @@ public enum Holiday {
 	LABOR_DAY("Labor Day"),
 	COLUMBUS_DAY("Columbus Day"),
 	VETERANS_DAY("Verterans Day"),
-	THANKSGIVING_DAY("Thanksgiving"),
+	THANKSGIVING("Thanksgiving"),
 	CHRISTMAS_DAY("Christmas");
 	
 	private final String name;
 	
-	private Holiday(String name) { this.name = name; }
+	private FederalHoliday(String name) { this.name = name; }
 	
+	@Override
 	public String getName() { return name; }
 }
